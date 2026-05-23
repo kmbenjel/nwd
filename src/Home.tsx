@@ -137,6 +137,7 @@ export default function Home() {
               <Facebook size={18} />
             </a>
           </div>
+          <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-xs opacity-75 mt-4">
             جميع الحقوق محفوظة
           </p>
         </div>
