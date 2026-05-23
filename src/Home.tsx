@@ -55,9 +55,17 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Amiri, serif' }}>
             تقريظ حلية النوادي
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-4" style={{ fontFamily: 'Tajawal, sans-serif' }}>
+          <p className="text-xl md:text-2xl text-white/90 mb-6" style={{ fontFamily: 'Tajawal, sans-serif' }}>
             للقاضي الوزير الداه ولد أعمر طالب
           </p>
+          <div className="flex items-center justify-center">
+            <a href="https://web.facebook.com/taqy.ahmedou" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group bg-black/20 px-5 py-2.5 rounded-full backdrop-blur-sm border border-white/10">
+              <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-lg">
+                تقريظ: <span className="group-hover:underline decoration-dotted underline-offset-4">التقي الشيخ</span>
+              </p>
+              <Facebook size={20} />
+            </a>
+          </div>
         </div>
       </section>
 
