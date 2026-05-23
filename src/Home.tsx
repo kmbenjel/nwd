@@ -127,11 +127,11 @@ export default function Home() {
           <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm opacity-90">
             للقاضي الوزير الداه ولد أعمر طالب
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4 opacity-90">
-            <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm">
-              اعتنى به: خالد بنجلون
-            </p>
-            <a href="https://facebook.com/kmbenjel" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">
+          <div className="flex items-center justify-center mt-4 opacity-90">
+            <a href="https://facebook.com/kmbenjel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-200 transition-colors group">
+              <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm">
+                اعتنى به: <span className="group-hover:underline decoration-dotted underline-offset-4">خالد بنجلون</span>
+              </p>
               <Facebook size={18} />
             </a>
           </div>
