@@ -64,28 +64,26 @@ export default function Home() {
       {/* Main Content */}
       <section className="py-20 px-4 md:px-8">
         <div className="max-w-4xl mx-auto pt-8">
-          <div className="space-y-8">
+          <div className="bg-white/50 backdrop-blur-sm border border-primary/20 rounded-lg p-6 md:p-10 transition-colors duration-300 space-y-10">
             {verses.map((verse, index) => (
               <div
                 key={index}
                 className={`transition-all duration-500 transform ${visibleVerses.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               >
                 {/* Verse Container */}
-                <div className="bg-white/50 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:bg-white/70 transition-colors duration-300">
-                  <div className="space-y-3">
-                    <p 
-                      className="text-xl leading-relaxed text-foreground"
-                      style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
-                    >
-                      {verse.first}
-                    </p>
-                    <p 
-                      className="text-xl leading-relaxed text-foreground"
-                      style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
-                    >
-                      {verse.second}
-                    </p>
-                  </div>
+                <div className="space-y-3 text-center">
+                  <p 
+                    className="text-xl leading-relaxed text-foreground"
+                    style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
+                  >
+                    {verse.first}
+                  </p>
+                  <p 
+                    className="text-xl leading-relaxed text-foreground"
+                    style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
+                  >
+                    {verse.second}
+                  </p>
                 </div>
               </div>
             ))}
