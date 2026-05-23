@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Facebook } from 'lucide-react';
 
 const verses = [
   { first: "الْحَمْدُ لِلَّهِ عَلَى مَا أَنْعَمَا", second: "بِهِ مِنْ آيٍ كَشَفَتْ عَنَّا الْعَمَى" },
@@ -57,24 +58,12 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-white/90 mb-4" style={{ fontFamily: 'Tajawal, sans-serif' }}>
             للقاضي الوزير الداه ولد أعمر طالب
           </p>
-          <p className="text-lg text-white/80" style={{ fontFamily: 'Tajawal, sans-serif' }}>
-            منظومة مشكولة بإتقان مع تصميم موريتاني جذاب
-          </p>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="py-20 px-4 md:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Poem Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Amiri, serif', color: '#6B4423' }}>
-              النص الكامل المشكول
-            </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
-          </div>
-
-          {/* Verses */}
+        <div className="max-w-4xl mx-auto pt-8">
           <div className="space-y-8">
             {verses.map((verse, index) => (
               <div
@@ -98,17 +87,6 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-
-                {/* Decorative Divider */}
-                {index < verses.length - 1 && (
-                  <div className="flex justify-center my-6">
-                    <img 
-                      src="https://d2xsxph8kpxj0f.cloudfront.net/310519663121773177/A9y6sZJVFe5b7CHDKSDCxM/decorative-divider-S32CpfUT9mfkM7okDbC3Gv.webp"
-                      alt="فاصل زخرفي"
-                      className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    />
-                  </div>
-                )}
               </div>
             ))}
           </div>
@@ -149,9 +127,16 @@ export default function Home() {
             تقريظ منظومة حلية النوادي
           </p>
           <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm opacity-90">
-            للقاضي الوزير الداه ولد أعمر طالب | مشكول بإتقان مع تصميم موريتاني حديث
+            للقاضي الوزير الداه ولد أعمر طالب
           </p>
-          <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-xs opacity-75 mt-4">
+          <div className="flex items-center justify-center gap-2 mt-4 opacity-90">
+            <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm">
+              اعتنى به: خالد بنجلون
+            </p>
+            <a href="https://facebook.com/kmbenjel" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors">
+              <Facebook size={18} />
+            </a>
+          </div>
             جميع الحقوق محفوظة
           </p>
         </div>
