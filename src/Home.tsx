@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Facebook } from 'lucide-react';
+import { Facebook, ChevronDown } from 'lucide-react';
 
 const verses = [
   { first: "الْحَمْدُ لِلَّهِ عَلَى مَا أَنْعَمَا", second: "بِهِ مِنَ ايٍ كَشَفَتْ عَنَّا الْعَمَى" },
@@ -33,18 +33,26 @@ export default function Home() {
   const [visibleVerses, setVisibleVerses] = useState<number[]>([]);
 
   useEffect(() => {
+    const timers: NodeJS.Timeout[] = [];
     verses.forEach((_, index) => {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         setVisibleVerses(prev => [...prev, index]);
       }, index * 100);
+      timers.push(timer);
     });
+    return () => timers.forEach(clearTimeout);
   }, []);
 
+  const scrollToPoem = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen bg-background text-foreground" dir="rtl">
+    <div className="min-h-screen bg-background relative overflow-hidden" dir="rtl">
       {/* Hero Section */}
       <section 
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
+        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center cursor-pointer"
+        onClick={scrollToPoem}
         style={{
           backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663121773177/A9y6sZJVFe5b7CHDKSDCxM/hero-background-W9EBXxp5h8FshVSV2APYGN.webp)',
           backgroundAttachment: 'fixed'
@@ -52,20 +60,38 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 text-center max-w-4xl px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Amiri, serif' }}>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 hover:opacity-80 transition-opacity" style={{ fontFamily: 'Amiri, serif' }}>
             تقريظ حلية النوادي
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-6" style={{ fontFamily: 'Tajawal, sans-serif' }}>
             للقاضي الوزير الداه ولد أعمر طالب
           </p>
-          <div className="flex items-center justify-center">
-            <a href="https://web.facebook.com/taqy.ahmedou" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group bg-black/20 px-5 py-2.5 rounded-full backdrop-blur-sm border border-white/10">
+          <div className="flex items-center justify-center mb-8">
+            <a 
+              href="https://web.facebook.com/taqy.ahmedou" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group bg-black/20 px-5 py-2.5 rounded-full backdrop-blur-sm border border-white/10"
+            >
               <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-lg">
                 تقريظ: <span className="group-hover:underline decoration-dotted underline-offset-4">التقي الشيخ</span>
               </p>
               <Facebook size={20} />
             </a>
           </div>
+          
+          <button 
+            onClick={(e) => { e.stopPropagation(); scrollToPoem(); }}
+            className="mt-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md px-8 py-3 rounded-full text-lg font-bold transition-all hover:scale-105"
+            style={{ fontFamily: 'Tajawal, sans-serif' }}
+          >
+            اقرأ المنظومة
+          </button>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/70">
+          <ChevronDown size={40} />
         </div>
       </section>
 
