@@ -99,32 +99,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16 px-4 md:px-8 bg-secondary/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{ fontFamily: 'Amiri, serif', color: '#6B4423' }}>
-            عن المنظومة
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20">
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Tajawal, sans-serif', color: '#6B4423' }}>
-                حلية النوادي
-              </h3>
-              <p className="text-foreground leading-relaxed" style={{ fontFamily: 'Tajawal, sans-serif' }}>
-                منظومة قيمة في علم القراءات القرآنية، تجمع بين الأصالة العلمية والجودة الأدبية، وتعتبر مرجعاً مهماً لطلاب العلم.
-              </p>
-            </div>
-            <div className="bg-white/50 backdrop-blur-sm p-6 rounded-lg border border-primary/20">
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Tajawal, sans-serif', color: '#6B4423' }}>
-                القاضي الوزير
-              </h3>
-              <p className="text-foreground leading-relaxed" style={{ fontFamily: 'Tajawal, sans-serif' }}>
-                القاضي الوزير الداه ولد أعمر طالب، عالم موريتاني فاضل، له إسهامات مهمة في الدراسات الإسلامية والقرآنية.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-8 px-4">
@@ -132,9 +106,7 @@ export default function Home() {
           <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="mb-2">
             تقريظ منظومة حلية النوادي
           </p>
-          <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm opacity-90">
-            للقاضي الوزير الداه ولد أعمر طالب
-          </p>
+
           <div className="flex items-center justify-center mt-4 opacity-90">
             <a href="https://facebook.com/kmbenjel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-200 transition-colors group">
               <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm">
