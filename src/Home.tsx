@@ -33,7 +33,7 @@ export default function Home() {
   const [visibleVerses, setVisibleVerses] = useState<number[]>([]);
 
   useEffect(() => {
-    const timers: NodeJS.Timeout[] = [];
+    const timers: ReturnType<typeof setTimeout>[] = [];
     verses.forEach((_, index) => {
       const timer = setTimeout(() => {
         setVisibleVerses(prev => [...prev, index]);
