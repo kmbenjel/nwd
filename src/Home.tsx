@@ -56,7 +56,7 @@ export default function Home() {
             تقريظ حلية النوادي
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-6" style={{ fontFamily: 'Tajawal, sans-serif' }}>
-            للقاضي الوزير الداه ولد أعمر طالب
+            تأليف الأصل: القاضي الوزير الداه ولد أعمر طالب
           </p>
           <div className="flex items-center justify-center">
             <a href="https://web.facebook.com/taqy.ahmedou" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group bg-black/20 px-5 py-2.5 rounded-full backdrop-blur-sm border border-white/10">
@@ -133,7 +133,7 @@ export default function Home() {
             تقريظ منظومة حلية النوادي
           </p>
           <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-sm opacity-90">
-            للقاضي الوزير الداه ولد أعمر طالب
+            تأليف الأصل: القاضي الوزير الداه ولد أعمر طالب
           </p>
           <div className="flex items-center justify-center mt-4 opacity-90">
             <a href="https://facebook.com/kmbenjel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-200 transition-colors group">
