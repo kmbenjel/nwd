@@ -80,14 +80,7 @@ export default function Home() {
               <Facebook size={20} />
             </a>
           </div>
-          
-          <button 
-            onClick={(e) => { e.stopPropagation(); scrollToPoem(); }}
-            className="mt-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md px-8 py-3 rounded-full text-lg font-bold transition-all hover:scale-105"
-            style={{ fontFamily: 'Tajawal, sans-serif' }}
-          >
-            اقرأ المنظومة
-          </button>
+
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/70">
