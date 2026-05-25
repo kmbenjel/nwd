@@ -51,7 +51,7 @@ export default function Home() {
     <div className="min-h-screen bg-background relative overflow-hidden" dir="rtl">
       {/* Hero Section */}
       <section 
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center cursor-pointer"
+        className="relative w-full h-[100dvh] bg-cover bg-center flex items-center justify-center cursor-pointer"
         onClick={scrollToPoem}
         style={{
           backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663121773177/A9y6sZJVFe5b7CHDKSDCxM/hero-background-W9EBXxp5h8FshVSV2APYGN.webp)',
@@ -83,7 +83,7 @@ export default function Home() {
 
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/70">
+        <div className="absolute bottom-16 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/70">
           <ChevronDown size={40} />
         </div>
       </section>
