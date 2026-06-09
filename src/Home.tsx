@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-4 md:px-8">
+      <main className="py-20 px-4 md:px-8">
         <div className="max-w-4xl mx-auto pt-8">
           <div className="bg-white/50 backdrop-blur-sm border border-primary/20 rounded-lg p-6 md:p-10 transition-colors duration-300 space-y-10">
             {verses.map((verse, index) => (
@@ -116,7 +116,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </main>
 
 
       {/* Footer */}
