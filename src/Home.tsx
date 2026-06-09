@@ -49,73 +49,82 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden" dir="rtl">
-      {/* Hero Section */}
-      <section 
-        className="relative w-full h-[100dvh] bg-cover bg-center flex items-center justify-center cursor-pointer"
-        onClick={scrollToPoem}
-        style={{
-          backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663121773177/A9y6sZJVFe5b7CHDKSDCxM/hero-background-W9EBXxp5h8FshVSV2APYGN.webp)',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 text-center max-w-4xl px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 hover:opacity-80 transition-opacity" style={{ fontFamily: 'Amiri, serif' }}>
-            تقريظ حلية النوادي
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-6" style={{ fontFamily: 'Tajawal, sans-serif' }}>
-            للقاضي الوزير الداه ولد أعمر طالب
-          </p>
-          <div className="flex items-center justify-center mb-8">
-            <a 
-              href="https://web.facebook.com/taqy.ahmedou" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              onClick={(e) => e.stopPropagation()}
-              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group bg-black/20 px-5 py-2.5 rounded-full backdrop-blur-sm border border-white/10"
-            >
-              <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-lg">
-                تقريظ: <span className="group-hover:underline decoration-dotted underline-offset-4">التقي الشيخ</span>
-              </p>
-              <Facebook size={20} />
-            </a>
-          </div>
-
-        </div>
-
-        <div className="absolute bottom-16 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/70">
-          <ChevronDown size={40} />
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <main className="py-20 px-4 md:px-8">
-        <div className="max-w-4xl mx-auto pt-8">
-          <div className="bg-white/50 backdrop-blur-sm border border-primary/20 rounded-lg p-6 md:p-10 transition-colors duration-300 space-y-10">
-            {verses.map((verse, index) => (
-              <div
-                key={index}
-                className={`transition-all duration-500 transform ${visibleVerses.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+      <main>
+        {/* Hero Section */}
+        <section 
+          className="relative w-full h-[100dvh] bg-cover bg-center flex items-center justify-center cursor-pointer"
+          onClick={scrollToPoem}
+          style={{
+            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663121773177/A9y6sZJVFe5b7CHDKSDCxM/hero-background-W9EBXxp5h8FshVSV2APYGN.webp)',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="relative z-10 text-center max-w-4xl px-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 hover:opacity-80 transition-opacity" style={{ fontFamily: 'Amiri, serif' }}>
+              تقريظ حلية النوادي
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-6" style={{ fontFamily: 'Tajawal, sans-serif' }}>
+              للقاضي الوزير الداه ولد أعمر طالب
+            </p>
+            <div className="flex items-center justify-center mb-8">
+              <a 
+                href="https://web.facebook.com/taqy.ahmedou" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors group bg-black/20 px-5 py-2.5 rounded-full backdrop-blur-sm border border-white/10"
               >
-                {/* Verse Container */}
-                <div className="space-y-3 text-center">
-                  <p 
-                    className="text-xl leading-relaxed text-foreground"
-                    style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
-                  >
-                    {verse.first}
-                  </p>
-                  <p 
-                    className="text-xl leading-relaxed text-foreground"
-                    style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
-                  >
-                    {verse.second}
-                  </p>
-                </div>
-              </div>
-            ))}
+                <p style={{ fontFamily: 'Tajawal, sans-serif' }} className="text-lg">
+                  تقريظ: <span className="group-hover:underline decoration-dotted underline-offset-4">التقي الشيخ</span>
+                </p>
+                <Facebook size={20} />
+              </a>
+            </div>
+
           </div>
-        </div>
+
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              scrollToPoem();
+            }}
+            aria-label="الانتقال إلى المنظومة"
+            className="absolute bottom-16 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/70 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2 cursor-pointer bg-transparent border-none"
+          >
+            <ChevronDown size={40} />
+          </button>
+        </section>
+
+        {/* Main Content */}
+        <section className="py-20 px-4 md:px-8">
+          <div className="max-w-4xl mx-auto pt-8">
+            <div className="bg-white/50 backdrop-blur-sm border border-primary/20 rounded-lg p-6 md:p-10 transition-colors duration-300 space-y-10">
+              {verses.map((verse, index) => (
+                <div
+                  key={index}
+                  className={`transition-all duration-500 transform ${visibleVerses.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                >
+                  {/* Verse Container */}
+                  <div className="space-y-3 text-center">
+                    <p 
+                      className="text-xl leading-relaxed text-foreground"
+                      style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
+                    >
+                      {verse.first}
+                    </p>
+                    <p 
+                      className="text-xl leading-relaxed text-foreground"
+                      style={{ fontFamily: 'Amiri Quran, serif', fontSize: '1.3rem' }}
+                    >
+                      {verse.second}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
 
