@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="تقريظ حلية النوادي">
+  <!-- Leather background -->
+  <rect width="120" height="120" rx="18" fill="#8d6c44"/>
+  
+  <!-- Subtle inner border line -->
+  <rect x="3" y="3" width="114" height="114" rx="16" fill="none" stroke="#aa8556" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- Flanking diamond tips (hollow stroke) -->
+  <polyline points="-10,38 14,60 -10,82" fill="none" stroke="#542e0e" stroke-width="6.5" stroke-linejoin="round" opacity="0.85"/>
+  <polyline points="130,38 106,60 130,82" fill="none" stroke="#542e0e" stroke-width="6.5" stroke-linejoin="round" opacity="0.85"/>
+
+  <!-- Outer diamond -->
+  <polygon points="60,14 106,60 60,106 14,60" fill="none" stroke="#542e0e" stroke-width="6.5" stroke-linejoin="round"/>
+
+  <!-- Inner diamond with filled tone -->
+  <polygon points="60,26 94,60 60,94 26,60" fill="#75522c" stroke="#542e0e" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Horizontal center divider -->
+  <line x1="26" y1="60" x2="94" y2="60" stroke="#542e0e" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Upper vertical bar & jewel droplet -->
+  <line x1="60" y1="28" x2="60" y2="58" stroke="#542e0e" stroke-width="2.5"/>
+  <circle cx="60" cy="45" r="4.5" fill="#3f2108"/>
+
+  <!-- Lower vertical bar & jewel droplet -->
+  <line x1="60" y1="62" x2="60" y2="92" stroke="#542e0e" stroke-width="2.5"/>
+  <circle cx="60" cy="75" r="4.5" fill="#3f2108"/>
+</svg>
