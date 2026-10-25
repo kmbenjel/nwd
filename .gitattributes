@@ -1,0 +1,3 @@
+# Mark Vite build output and HTML wrapper as generated so Linguist highlights TypeScript/React source
+dist/** linguist-generated=true
+index.html linguist-generated=true
